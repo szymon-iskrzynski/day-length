@@ -1,7 +1,6 @@
-package pl.iskrzynski.dayLength;
+package pl.iskrzynski.dayLength.dayLength;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 public class CalculateDayLength {

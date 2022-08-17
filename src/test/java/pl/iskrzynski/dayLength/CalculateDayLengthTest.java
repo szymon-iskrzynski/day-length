@@ -1,6 +1,9 @@
 package pl.iskrzynski.dayLength;
 
 import org.junit.jupiter.api.Test;
+import pl.iskrzynski.dayLength.dayLength.CalculateDayLength;
+import pl.iskrzynski.dayLength.dayLength.CitiCoordinates;
+import pl.iskrzynski.dayLength.dayLength.DayLengthModel;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
