@@ -9,14 +9,8 @@ import java.util.Map;
 
 public class DayLengthService {
 
-    public Response requestResponse(Map<String, String> aParams){
-
-
-
-        return Response.builder()
-                .dayLengthModel( CalculateDayLength.calculate(LocalDate.of(2000,1,1) ,
-                        CitiCoordinates.builder().longitude(50).latitude(21).build())).build();
-
+    public Response requestResponse(Map<String, String> aParams) {
+        return Response.builder().dayLengthModel(CalculateDayLength.calculate(LocalDate.of(2000, 1, 1), CitiCoordinates.builder().longitude(50).latitude(21).build())).build();
     }
 
 }

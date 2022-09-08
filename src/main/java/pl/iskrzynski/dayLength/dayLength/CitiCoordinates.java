@@ -12,5 +12,4 @@ import lombok.Builder;
 public class CitiCoordinates {
     private final double latitude;
     private final double longitude;
-
 }
