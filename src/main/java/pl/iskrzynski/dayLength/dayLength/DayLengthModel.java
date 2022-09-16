@@ -1,4 +1,4 @@
-package pl.iskrzynski.dayLength;
+package pl.iskrzynski.dayLength.dayLength;
 
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;

@@ -1,4 +1,4 @@
-package pl.iskrzynski.dayLength;
+package pl.iskrzynski.dayLength.dayLength;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
