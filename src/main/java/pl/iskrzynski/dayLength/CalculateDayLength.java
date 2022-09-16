@@ -1,7 +1,6 @@
 package pl.iskrzynski.dayLength;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 public class CalculateDayLength {
@@ -11,8 +10,8 @@ public class CalculateDayLength {
         final int month = localDate.getMonthValue();
         final int day = localDate.getDayOfMonth();
 
-        double N = aCitiCoordinates.getLatitude();
-        double E = aCitiCoordinates.getLongitude();
+        double N = aCitiCoordinates.latitude();
+        double E = aCitiCoordinates.longitude();
 
         double C = (367 * year - (int) (7 * (year + (int) ((month + 9) / 12)) / 4) + (int) (275 * month / 9) + day - 730531.5) / 36525;
 
