@@ -12,8 +12,7 @@ public class DayLengthController {
 
     @GetMapping("")
     public String showInstruction() {
-
-        return "http://day-length.herokuapp.com/api/v1/?E=52?N=21?data=1/1/2000?citi=Warszawa";
+        return "Hello world";
     }
 
     @GetMapping("api/v1")
