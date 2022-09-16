@@ -40,7 +40,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>dayLength</finalName>
+		<finalName>day</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
