@@ -12,7 +12,7 @@ public class DayLengthController {
 
     @GetMapping("")
     public String showInstruction() {
-        return "Hello world";
+        return "Hello world!!!!";
     }
 
     @GetMapping("api/v1")
