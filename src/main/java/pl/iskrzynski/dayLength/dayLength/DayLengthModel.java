@@ -1,13 +1,10 @@
 package pl.iskrzynski.dayLength.dayLength;
 
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.ToString;
+import lombok.*;
 
 import java.time.LocalTime;
 
-@SuppressWarnings("ClassCanBeRecord")
+
 @AllArgsConstructor
 @Getter
 @EqualsAndHashCode
@@ -15,4 +12,9 @@ import java.time.LocalTime;
 public class DayLengthModel {
     private final LocalTime sunriseTime;
     private final LocalTime sunsetTime;
+
+    public DayLengthModel(){
+        this.sunriseTime = LocalTime.ofSecondOfDay(0);
+        this.sunsetTime= LocalTime.ofSecondOfDay(0);
+    }
 }

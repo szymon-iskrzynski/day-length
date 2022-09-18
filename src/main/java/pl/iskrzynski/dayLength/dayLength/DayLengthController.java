@@ -3,6 +3,7 @@ package pl.iskrzynski.dayLength.dayLength;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import pl.iskrzynski.dayLength.Message;
 import pl.iskrzynski.dayLength.Response;
 
 import java.util.Map;
@@ -18,6 +19,7 @@ public class DayLengthController {
     @GetMapping("api/v1")
     public Response dayLength(@RequestParam Map<String, String> aParams) {
         DayLengthService dayLengthService = new DayLengthService();
+//        Response response = new Response(new Message("Error"));
         return dayLengthService.requestResponse(aParams);
     }
 }

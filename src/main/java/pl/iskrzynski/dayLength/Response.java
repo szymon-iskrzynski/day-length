@@ -9,6 +9,13 @@ import pl.iskrzynski.dayLength.user.UserModel;
 @AllArgsConstructor
 @Builder
 public class Response {
+    public final Message message;
     public final DayLengthModel dayLengthModel;
     public final UserModel user;
+
+    public Response(Message aMessage) {
+        this.message = aMessage;
+        this.dayLengthModel = new DayLengthModel();
+        this.user =new UserModel();
+    }
 }
