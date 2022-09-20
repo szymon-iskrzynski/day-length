@@ -1,5 +1,6 @@
 package pl.iskrzynski.dayLength.dayLength;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 
 import java.time.LocalTime;
@@ -10,11 +11,11 @@ import java.time.LocalTime;
 @EqualsAndHashCode
 @ToString
 public class DayLengthModel {
-    private final LocalTime sunriseTime;
-    private final LocalTime sunsetTime;
+    private final LocalTime sunrise;
+    private final LocalTime sunset;
 
     public DayLengthModel(){
-        this.sunriseTime = LocalTime.ofSecondOfDay(0);
-        this.sunsetTime= LocalTime.ofSecondOfDay(0);
+        this.sunrise = LocalTime.ofSecondOfDay(0);
+        this.sunset = LocalTime.ofSecondOfDay(0);
     }
 }

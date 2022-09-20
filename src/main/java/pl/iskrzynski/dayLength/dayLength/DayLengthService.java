@@ -13,8 +13,10 @@ import java.util.Map;
 public class DayLengthService {
     private Map<String,String> params;
     public Response requestResponse(Map<String, String> aParams) {
+        Double E = Double.parseDouble(aParams.get("E"));
+        Double S = Double.parseDouble(aParams.get("S"));
         return Response.builder().dayLengthModel(CalculateDayLength.calculate(LocalDate.now(),
-                CitiCoordinates.builder().longitude(50).latitude(21).build())).build();
+                CitiCoordinates.builder().longitude(S).latitude(E).build())).build();
     }
 
 }

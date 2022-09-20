@@ -19,7 +19,6 @@ public class DayLengthController {
     @GetMapping("api/v1")
     public Response dayLength(@RequestParam Map<String, String> aParams) {
         DayLengthService dayLengthService = new DayLengthService();
-//        Response response = new Response(new Message("Error"));
         return dayLengthService.requestResponse(aParams);
     }
 }
