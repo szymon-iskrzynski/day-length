@@ -8,7 +8,6 @@ import lombok.Setter;
 @Setter
 public class Message {
     private String message;
-
     public Message (String aMessage){
         this.message = aMessage;
     }

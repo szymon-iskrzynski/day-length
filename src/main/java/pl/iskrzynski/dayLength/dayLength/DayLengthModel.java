@@ -11,7 +11,9 @@ import java.time.LocalTime;
 @EqualsAndHashCode
 @ToString
 public class DayLengthModel {
+    @JsonProperty("UTC_sunrise")
     private final LocalTime sunrise;
+    @JsonProperty("UTC_sunset")
     private final LocalTime sunset;
 
     public DayLengthModel(){

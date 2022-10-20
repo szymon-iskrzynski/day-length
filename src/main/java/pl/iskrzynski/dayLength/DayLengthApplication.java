@@ -7,11 +7,9 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 
 @SpringBootApplication
 public class DayLengthApplication extends SpringBootServletInitializer {
-
     public static void main(String[] args) {
         SpringApplication.run(DayLengthApplication.class, args);
     }
-
     @Override
     protected SpringApplicationBuilder configure (SpringApplicationBuilder builder){
         return builder.sources(DayLengthApplication.class);

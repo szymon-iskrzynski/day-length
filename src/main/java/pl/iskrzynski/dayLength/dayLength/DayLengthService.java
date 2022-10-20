@@ -1,10 +1,10 @@
 package pl.iskrzynski.dayLength.dayLength;
 
-import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
+import pl.iskrzynski.dayLength.Data;
+import pl.iskrzynski.dayLength.Error;
+import pl.iskrzynski.dayLength.Message;
 import pl.iskrzynski.dayLength.Response;
-import pl.iskrzynski.dayLength.dayLength.CalculateDayLength;
-import pl.iskrzynski.dayLength.dayLength.CitiCoordinates;
 
 import java.time.LocalDate;
 import java.util.Map;
@@ -13,10 +13,18 @@ import java.util.Map;
 public class DayLengthService {
     private Map<String,String> params;
     public Response requestResponse(Map<String, String> aParams) {
-        Double E = Double.parseDouble(aParams.get("E"));
-        Double S = Double.parseDouble(aParams.get("S"));
-        return Response.builder().dayLengthModel(CalculateDayLength.calculate(LocalDate.now(),
-                CitiCoordinates.builder().longitude(S).latitude(E).build())).build();
+        if (aParams.containsKey("N") && aParams.containsKey("E") && aParams.size()==2) {
+
+            Double N = Double.parseDouble(aParams.get("N"));
+            Double E = Double.parseDouble(aParams.get("E"));
+            return Data.builder()
+                    .dayLengthModel(CalculateDayLength.calculate(LocalDate.now(),CitiCoordinates.builder().longitude(E).latitude(N).build()))
+                    .message(new Message("OK"))
+                    .build();
+        }
+        else {
+            return new Error();
+        }
     }
 
 }

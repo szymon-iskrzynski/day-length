@@ -39,5 +39,4 @@ public class CalculateDayLength {
 
         return new DayLengthModel(LocalTime.ofSecondOfDay((int) (3600 * T1)),LocalTime.ofSecondOfDay((int) (3600 * T2)));
     }
-
 }
