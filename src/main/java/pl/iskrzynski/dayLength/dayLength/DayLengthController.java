@@ -13,7 +13,7 @@ public class DayLengthController {
 
     @GetMapping("")
     public String showInstruction() {
-        return "example: day.appset.pl/api/?N=52&E=21";
+        return "example: day.appset.pl/api/?N=50&E=21";
     }
 
     @GetMapping("api")
